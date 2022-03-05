@@ -5,9 +5,9 @@ const consoleTable = require('console.table');
 //create a connection to database
 const connection = mysql.createConnection({
     host: 'localhost',
-    port: 3001,
+    port: 3306,
     user: 'root',
-    password: 'ucr123',
+    password: '',
     database: 'employees_db'
 })
 
@@ -79,7 +79,7 @@ function viewDepartments() {
 
 //view all roles
 function viewRoles() {
-    var query = "SELECT * FROM roles";
+    var query = "SELECT * FROM role";
     connection.query(query, function (err, res) {
         if (err) throw err;
         console.table("All Roles:", res);
@@ -88,7 +88,7 @@ function viewRoles() {
 
 //view all employees
 function viewEmployees() {
-    var query = "SELECT * FROM employees";
+    var query = "SELECT * FROM employee";
     connection.query(query, function (err, res) {
         if (err) throw err;
         console.table("All Employees:", res);
@@ -150,7 +150,7 @@ function addRole() {
                 }
             ]).then(function (answer) {
                 let department_id;
-                for (let i = 0; a < res.length; a++) {
+                for (let a = 0; a < res.length; a++) {
                     if (res[a].name == answer.Department) {
                         department_id = res[a].id;
                     }
@@ -208,7 +208,7 @@ function addEmployee() {
             ]).then(function (answer) {
                 let role_id;
                 for (let a = 0; a < res.length; a++) {
-                    if (ress[a].title == answer.role) {
+                    if (res[a].title == answer.role) {
                         role_id = res[a].id;
                         console.log(role_id)
                     }
