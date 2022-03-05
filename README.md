@@ -24,14 +24,14 @@ WHEN I choose to update an employee role
 THEN I am prompted to select an employee to update and their new role and this information is updated in the database
 
 
-## DEMO VIDEO
+## DEMO GIF
 ![Untitled_ Mar 4, 2022 8_07 PM (1)](https://user-images.githubusercontent.com/93751925/156867293-8a6069c5-c393-420b-9f0d-4aea868d8413.gif)
 
 
 ## How to use
 Open Terminal => Run "node app.js" => Sucess!
 
-## VIDEO DEMO
+## VIDEO DEMO (FULL WALKTHROUGH)
 
 https://user-images.githubusercontent.com/93751925/156867369-e8d68fea-aed0-4684-86f2-3265ee0b7a9b.mp4
 
